@@ -5,7 +5,7 @@ interface ProductsWrapperProps {
     products: ProductType[]
 }
 
-export const ProductsWrapper = ({ products }: ProductsWrapperProps) => {
+export const ProductsWrapper: React.FC<ProductsWrapperProps> = ({ products = [] }: ProductsWrapperProps) => {
   return (
     <div className={styles.ProductsWrapper}>
       {products.map((product) => (
